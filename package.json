@@ -1,0 +1,19 @@
+{
+  "name": "klamath-app",
+  "version": "1.0.0",
+  "description": "Klamath Tribes Website React App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dunhamde/klamath-app.git"
+  },
+  "author": "Derek Dunham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dunhamde/klamath-app/issues"
+  },
+  "homepage": "https://github.com/dunhamde/klamath-app#readme"
+}
