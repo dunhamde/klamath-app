@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import styled from 'styled-components'
+import BannerImg from './../../../public/klamathtribes1200.png'
 
 const SiteHeaderContainer = styled.div`
     width: 100%;
@@ -10,8 +11,12 @@ const SiteHeaderContainer = styled.div`
 
 export const SiteHeader = () => {
     return (
-        <SiteHeaderContainer>SiteHeader</SiteHeaderContainer>
+        <Fragment>
+            {/* <SiteHeaderContainer>SiteHeader</SiteHeaderContainer> */}
+            <img src={BannerImg} />
+        </Fragment>
     )
+
 }
 
 export default SiteHeader
