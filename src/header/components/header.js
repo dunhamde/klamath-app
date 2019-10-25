@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import BannerImgSource from './../../../public/klamathtribes1200.png'
 import HeaderBackgroundImgSource from '../../../public/headerpic2.jpg'
 
 const BannerImg = styled.img`
-  // background-color: #d33a2c;
   position: absolute;
   justify-self: center;
 `
@@ -27,17 +27,29 @@ export const SiteHeader = () => {
       <HeaderContainer>
         <HeaderBackgroundImg src={HeaderBackgroundImgSource} />
         <BannerImg src={BannerImgSource} />
-        <SiteNavigationList>
-          <li>Home</li>
-          <li>News And Events</li>
-          <li>Tribal Departments</li>
-          <li>Employment</li>
-          <li>Language</li>
-          <li>Tribal History</li>
-          <li>Tribal Permits And Schedules</li>
-          <li>Contact Us</li>
-        </SiteNavigationList>
       </HeaderContainer>
+      <BrowserRouter>
+        <SiteNavigationList>
+          <li>
+            <Link to="www.google.com">News And Events</Link>
+          </li>
+          <li>
+            <Route path="">Tribal Departments</Route>
+          </li>
+          <li>
+            <Route path="">Employment</Route>
+          </li>
+          <li>
+            <Route path="">Tribal History</Route>
+          </li>
+          <li>
+            <Route path="">Tribal Permits And Schedules</Route>
+          </li>
+          <li>
+            <Route path="">Contact Us</Route>
+          </li>
+        </SiteNavigationList>
+      </BrowserRouter>
     </Fragment>
   )
 }
