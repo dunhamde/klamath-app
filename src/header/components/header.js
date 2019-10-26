@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import BannerImgSource from './../../../public/klamathtribes1200.png'
 import HeaderBackgroundImgSource from '../../../public/headerpic2.jpg'
@@ -28,28 +27,92 @@ export const SiteHeader = () => {
         <HeaderBackgroundImg src={HeaderBackgroundImgSource} />
         <BannerImg src={BannerImgSource} />
       </HeaderContainer>
-      <BrowserRouter>
-        <SiteNavigationList>
-          <li>
-            <Link to="www.google.com">News And Events</Link>
-          </li>
-          <li>
-            <Route path="">Tribal Departments</Route>
-          </li>
-          <li>
-            <Route path="">Employment</Route>
-          </li>
-          <li>
-            <Route path="">Tribal History</Route>
-          </li>
-          <li>
-            <Route path="">Tribal Permits And Schedules</Route>
-          </li>
-          <li>
-            <Route path="">Contact Us</Route>
-          </li>
-        </SiteNavigationList>
-      </BrowserRouter>
+      <SiteNavigationList>
+        <li>
+          <a
+            target="_blank"
+            onClick={() =>
+              window.location.replace(
+                'http://klamathtribes.org/news/',
+              )
+            }
+          >
+            News And Events
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            onClick={() =>
+              window.location.replace(
+                'http://klamathtribes.org/administration/',
+              )
+            }
+          >
+            Tribal Departments
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            onClick={() =>
+              window.location.replace(
+                'http://klamathtribes.org/job-openings/',
+              )
+            }
+          >
+            Employment
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            onClick={() =>
+              window.location.replace(
+                'http://klamathtribes.org/language/',
+              )
+            }
+          >
+            Language
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            onClick={() =>
+              window.location.replace(
+                'http://klamathtribes.org/history/',
+              )
+            }
+          >
+            Tribal History
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            onClick={() =>
+              window.location.replace(
+                'http://klamathtribes.org/tribal-links/',
+              )
+            }
+          >
+            Tribal Permits And Schedules
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            onClick={() =>
+              window.location.replace(
+                'http://klamathtribes.org/contact-us/',
+              )
+            }
+          >
+            Contact Us
+          </a>
+        </li>
+      </SiteNavigationList>
     </Fragment>
   )
 }
