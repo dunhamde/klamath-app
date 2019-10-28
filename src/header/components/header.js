@@ -17,9 +17,6 @@ const HeaderContainer = styled.div`
   display: flex;
   position: relative;
   max-width: 100%;
-  li {
-    background-color: blue;
-  }
 `
 
 export const SiteHeader = () => {

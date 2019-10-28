@@ -5,6 +5,12 @@ const SiteNavigationList = styled.ul`
   display: flex;
   height: 100px;
   background-color: red;
+  li {
+    background-color: orange;
+    list-style: none;
+    border: 2px solid black;
+    padding: 8px;
+  }
 `
 
 export const SiteNavLinks = () => {
