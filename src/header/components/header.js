@@ -4,11 +4,6 @@ import HeaderLogoSource from './../../../public/klamathtribes1200.png'
 import HeaderBannerSource from '../../../public/headerpic2.jpg'
 import HeaderLinksList from './header-links-list.js'
 
-const HeaderBannerImg = styled.img`
-  position: absolute;
-  z-index: 1;
-`
-
 const HeaderLogo = styled.img`
   z-index: 2;
   position: relative;
@@ -39,9 +34,6 @@ export const SiteHeader = () => {
   return (
     <Fragment>
       <HeaderContainer>
-        {/* <div>
-          <HeaderBannerImg src={HeaderBannerSource} />
-        </div> */}
         <HeaderLogo src={HeaderLogoSource} />
         <SiteNavigationList />
       </HeaderContainer>
