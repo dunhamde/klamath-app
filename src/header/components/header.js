@@ -18,10 +18,9 @@ const HeaderLogo = styled.img`
 
 const HeaderContainer = styled.div`
   max-width: 100%;
-  padding: 48px;
-  background-color: green;
   border: 12px solid blue;
   height: 432px;
+  background-image: url(${HeaderBannerSource});
 `
 
 const SiteNavigationList = styled(HeaderLinksList)`
@@ -40,7 +39,9 @@ export const SiteHeader = () => {
   return (
     <Fragment>
       <HeaderContainer>
-        <HeaderBannerImg src={HeaderBannerSource} />
+        {/* <div>
+          <HeaderBannerImg src={HeaderBannerSource} />
+        </div> */}
         <HeaderLogo src={HeaderLogoSource} />
         <SiteNavigationList />
       </HeaderContainer>
