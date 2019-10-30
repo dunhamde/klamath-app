@@ -1,21 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
 
-const SiteNavigationList = styled.ul`
-  display: flex;
-  height: 100px;
-  background-color: red;
-  li {
-    background-color: orange;
-    list-style: none;
-    border: 2px solid black;
-    padding: 8px;
-  }
-`
-
-export const SiteNavLinks = () => {
+export const HeaderLinksList = () => {
   return (
-    <SiteNavigationList>
+    <ul>
       <li>
         <a
           target="_blank"
@@ -98,8 +85,8 @@ export const SiteNavLinks = () => {
           Contact Us
         </a>
       </li>
-    </SiteNavigationList>
+    </ul>
   )
 }
 
-export default SiteNavLinks
+export default HeaderLinksList

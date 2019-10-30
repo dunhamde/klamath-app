@@ -1,32 +1,48 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import BannerImgSource from './../../../public/klamathtribes1200.png'
-import HeaderBackgroundImgSource from '../../../public/headerpic2.jpg'
-import SiteNavLinks from './site-nav-links.js'
+import HeaderBannerSource from './../../../public/klamathtribes1200.png'
+import HeaderLogoSource from '../../../public/headerpic2.jpg'
+import HeaderLinksList from './header-links-list.js'
 
-const BannerImg = styled.img`
-  position: absolute;
-  justify-self: center;
+const HeaderLogo = styled.img`
+  position: relative;
+  z-index: 1;
+  // justify-self: center;
 `
 
-const HeaderBackgroundImg = styled.img`
-  flex: 1;
+const HeaderBannerImg = styled.img`
+  // flex: 1;
+  // z-index: -1;
+  position: absolute;
 `
 
 const HeaderContainer = styled.div`
-  display: flex;
-  position: relative;
+  position: absolute;
   max-width: 100%;
+  // height: 144px
+  height: 432px;
+`
+
+const SiteNavigationList = styled(HeaderLinksList)`
+  display: flex;
+  height: 100px;
+  background-color: red;
+  li {
+    background-color: orange;
+    list-style: none;
+    border: 2px solid black;
+    padding: 12px;
+  }
 `
 
 export const SiteHeader = () => {
   return (
     <Fragment>
       <HeaderContainer>
-        <HeaderBackgroundImg src={HeaderBackgroundImgSource} />
-        <BannerImg src={BannerImgSource} />
+        <HeaderBannerImg src={HeaderBannerSource} />
+        <HeaderLogo src={HeaderLogoSource} />
+        <SiteNavigationList />
       </HeaderContainer>
-      <SiteNavLinks />
     </Fragment>
   )
 }
