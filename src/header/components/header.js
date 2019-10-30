@@ -1,28 +1,26 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import HeaderBannerSource from './../../../public/klamathtribes1200.png'
-import HeaderLogoSource from '../../../public/headerpic2.jpg'
+import HeaderLogoSource from './../../../public/klamathtribes1200.png'
+import HeaderBannerSource from '../../../public/headerpic2.jpg'
 import HeaderLinksList from './header-links-list.js'
 
-const HeaderLogo = styled.img`
-  position: relative;
+const HeaderBannerImg = styled.img`
+  position: absolute;
   z-index: 1;
 `
 
-const HeaderBannerImg = styled.img`
+const HeaderLogo = styled.img`
   z-index: 2;
-  position: absolute;
+  position: relative;
   height: auto;
   width: 80%;
 `
 
 const HeaderContainer = styled.div`
-  // position: absolute;
   max-width: 100%;
   padding: 48px;
   background-color: green;
   border: 12px solid blue;
-  // height: 144px
   height: 432px;
 `
 
