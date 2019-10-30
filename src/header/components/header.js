@@ -7,18 +7,21 @@ import HeaderLinksList from './header-links-list.js'
 const HeaderLogo = styled.img`
   position: relative;
   z-index: 1;
-  // justify-self: center;
 `
 
 const HeaderBannerImg = styled.img`
-  // flex: 1;
-  // z-index: -1;
+  z-index: 2;
   position: absolute;
+  height: auto;
+  width: 80%;
 `
 
 const HeaderContainer = styled.div`
-  position: absolute;
+  // position: absolute;
   max-width: 100%;
+  padding: 48px;
+  background-color: green;
+  border: 12px solid blue;
   // height: 144px
   height: 432px;
 `
