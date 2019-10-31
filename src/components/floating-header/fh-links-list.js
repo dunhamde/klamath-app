@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const HeaderLinksList = () => {
+export const FloatingHeaderLinksList = () => {
   return (
     <ul>
       <li>
@@ -89,4 +89,4 @@ export const HeaderLinksList = () => {
   )
 }
 
-export default HeaderLinksList
+export default FloatingHeaderLinksList

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import HeaderLogoSource from './../../../public/klamathtribes1200.png'
 import HeaderBannerSource from '../../../public/headerpic2.jpg'
-import HeaderLinksList from './header-links-list.js'
+import FloatingHeaderLinksList from './fh-links-list.js'
 
 const HeaderLogo = styled.img`
   z-index: 2;
@@ -16,9 +16,10 @@ const HeaderContainer = styled.div`
   border: 12px solid blue;
   height: 432px;
   background-image: url(${HeaderBannerSource});
+  background-size: cover;
 `
 
-const SiteNavigationList = styled(HeaderLinksList)`
+const SiteNavigationList = styled(FloatingHeaderLinksList)`
   display: flex;
   height: 100px;
   background-color: red;

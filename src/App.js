@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader'
 import styled from 'styled-components'
-import SiteHeader from './header/components/header.js'
+import FloatingHeader from './components/floating-header/floating-header.js'
 
 const AppContainer = styled.div`
   margin: 16px;
@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <AppContainer>
-        <SiteHeader />
+        <FloatingHeader />
       </AppContainer>
     )
   }
