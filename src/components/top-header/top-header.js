@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import TopHeaderLinksList from './th-links-list.js'
+import TopHeaderLinksList from './th-site-links-list.js'
 import YouTubeLogo from '../../../public/youtube-logo-hd-8.png'
 import FacebookLogo from '../../../public/fb-logo.png'
 
@@ -37,8 +37,22 @@ export const SiteHeader = () => {
       <HeaderContainer>
         <SiteNavigationList />
         <SocialMediaContainer>
-          <img src={YouTubeLogo} />
-          <img src={FacebookLogo} />
+          <img
+            src={YouTubeLogo}
+            onClick={() =>
+              window.location.replace(
+                'https://www.youtube.com/channel/UCB7lZfkGQyVB7fJ2iHmJDaQ',
+              )
+            }
+          />
+          <img
+            src={FacebookLogo}
+            onClick={() =>
+              window.location.replace(
+                'https://www.facebook.com/KlamathTribes',
+              )
+            }
+          />
         </SocialMediaContainer>
       </HeaderContainer>
     </Fragment>
