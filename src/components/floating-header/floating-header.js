@@ -31,7 +31,7 @@ const SiteNavigationList = styled(FloatingHeaderLinksList)`
   }
 `
 
-export const SiteHeader = () => {
+export const TopHeader = () => {
   return (
     <Fragment>
       <HeaderContainer>
@@ -42,4 +42,4 @@ export const SiteHeader = () => {
   )
 }
 
-export default SiteHeader
+export default TopHeader
