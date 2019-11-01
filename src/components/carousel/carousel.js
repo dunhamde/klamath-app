@@ -8,9 +8,7 @@ export const CarouselContainer = styled.div`
 `
 
 export const Carousel = () => {
-  return (
-    <CarouselContainer>Content carousel commit</CarouselContainer>
-  )
+  return <CarouselContainer>Content carousel</CarouselContainer>
 }
 
 export default Carousel
