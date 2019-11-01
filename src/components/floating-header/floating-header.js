@@ -5,13 +5,13 @@ import HeaderBannerSource from '../../../public/headerpic2.jpg'
 import FloatingHeaderLinksList from './fh-links-list.js'
 
 const HeaderLogo = styled.img`
-  z-index: 2;
-  position: relative;
-  height: auto;
+  align-self: center;
   width: 80%;
 `
 
 const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   max-width: 100%;
   border: 12px solid blue;
   height: 432px;
