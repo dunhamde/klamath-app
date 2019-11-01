@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader'
 import styled from 'styled-components'
 import FloatingHeader from './components/floating-header/floating-header.js'
 import TopHeader from './components/top-header/top-header.js'
+import Carousel from './components/carousel/carousel.js'
 
 const AppContainer = styled.div`
   margin: 16px;
@@ -15,6 +16,7 @@ class App extends Component {
       <AppContainer>
         <TopHeader />
         <FloatingHeader />
+        <Carousel />
       </AppContainer>
     )
   }
