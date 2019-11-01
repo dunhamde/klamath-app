@@ -9,7 +9,9 @@ export const CarouselContainer = styled.div`
 
 export const Carousel = () => {
   return (
-    <CarouselContainer>Content carouselasdfasdf</CarouselContainer>
+    <CarouselContainer>
+      Content carouselasdfasdfasdf
+    </CarouselContainer>
   )
 }
 
