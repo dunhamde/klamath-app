@@ -1,34 +1,29 @@
 import React from 'react'
+import YouTubeLogo from '../../../public/youtube-logo-hd-8.png'
+import FacebookLogo from '../../../public/fb-logo.png'
 
 export const TopHeaderSocialLinksList = () => {
   return (
-    <ul>
-      <li>
-        <a
-          target="_blank"
-          onClick={() =>
-            window.location.replace(
-              'http://klamathtribes.org/tribal-government/tribal-council/',
-            )
-          }
-        >
-          Klamath Tribal Council
-        </a>
-      </li>
-      <li>
-        <a
-          target="_blank"
-          onClick={() =>
-            window.location.replace(
-              'http://klamathtribes.org/history/',
-            )
-          }
-        >
-          History
-        </a>
-      </li>
-    </ul>
+    <div>
+      <img
+        src={YouTubeLogo}
+        onClick={() =>
+          window.location.replace(
+            'https://www.youtube.com/channel/UCB7lZfkGQyVB7fJ2iHmJDaQ',
+          )
+        }
+      />
+
+      <img
+        src={FacebookLogo}
+        onClick={() =>
+          window.location.replace(
+            'https://www.facebook.com/KlamathTribes',
+          )
+        }
+      />
+    </div>
   )
 }
 
-export default TopHeaderLinksList
+export default TopHeaderSocialLinksList
