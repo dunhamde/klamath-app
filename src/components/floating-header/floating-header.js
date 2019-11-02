@@ -10,6 +10,7 @@ const HeaderLogo = styled.img`
 `
 
 const HeaderContainer = styled.div`
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,10 +24,18 @@ const HeaderContainer = styled.div`
     display: flex;
   }
   li {
-    background-color: orange;
+    // background-color: orange;
     list-style: none;
-    border: 2px solid black;
+    border-left: 2px solid black;
     padding: 12px;
+  }
+  a {
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: black 2px 2px;
   }
 `
 
