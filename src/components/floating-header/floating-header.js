@@ -37,6 +37,13 @@ const HeaderContainer = styled.div`
     letter-spacing: 1px;
     text-shadow: black 2px 2px;
   }
+  a:hover {
+    color: rgba(221, 133, 0, 0.7);
+
+    ::before {
+      content: '♥';
+    }
+  }
 `
 
 const SiteNavigationList = styled(FloatingHeaderLinksList)`
