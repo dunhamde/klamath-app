@@ -12,23 +12,28 @@ const HeaderLogo = styled.img`
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 100%;
   border: 12px solid blue;
   height: 432px;
   background-image: url(${HeaderBannerSource});
   background-size: cover;
-`
 
-const SiteNavigationList = styled(FloatingHeaderLinksList)`
-  display: flex;
-  height: 100px;
-  background-color: red;
+  ul {
+    display: flex;
+  }
   li {
     background-color: orange;
     list-style: none;
     border: 2px solid black;
     padding: 12px;
   }
+`
+
+const SiteNavigationList = styled(FloatingHeaderLinksList)`
+  display: flex;
+  height: 100px;
+  background-color: red;
 `
 
 export const TopHeader = () => {
