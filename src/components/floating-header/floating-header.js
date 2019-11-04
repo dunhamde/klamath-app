@@ -42,13 +42,26 @@ const HeaderContainer = styled.div`
     font-weight: 600;
     letter-spacing: 1px;
     text-shadow: black 2px 2px;
+    overflow: hidden;
   }
   a:hover {
     color: rgba(221, 133, 0, 0.7);
-
-    ::before {
-      content: '♥';
-    }
+  }
+  li::after {
+    margin-top: 2px;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: rgba(221, 133, 0, 0.7);
+    display: block;
+    transform: rotateY(90deg);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  li:hover::after {
+    transform: rotateY(180deg);
   }
 `
 

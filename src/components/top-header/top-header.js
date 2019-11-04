@@ -6,6 +6,7 @@ import TopHeaderSocialLinksList from './th-social-links-list.js'
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-around;
+  background-image: linear-gradient(rgb(0, 0, 255), rgb(0, 128, 0));
   max-width: 100%;
   background-color: green;
   height: 48px;
