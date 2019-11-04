@@ -22,6 +22,8 @@ const HeaderContainer = styled.div`
 
   ul {
     display: flex;
+    padding-left: 0;
+    text-align: center;
 
     li:first-child {
       border-left: 0;
@@ -50,18 +52,13 @@ const HeaderContainer = styled.div`
   }
 `
 
-const SiteNavigationList = styled(FloatingHeaderLinksList)`
-  display: flex;
-  height: 100px;
-  background-color: red;
-`
-
 export const TopHeader = () => {
   return (
     <Fragment>
       <HeaderContainer>
         <HeaderLogo src={HeaderLogoSource} />
-        <SiteNavigationList />
+
+        <FloatingHeaderLinksList />
       </HeaderContainer>
     </Fragment>
   )
