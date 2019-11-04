@@ -15,16 +15,20 @@ const HeaderContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   max-width: 100%;
-  border: 12px solid blue;
+  border: 1px solid blue;
   height: 432px;
   background-image: url(${HeaderBannerSource});
   background-size: cover;
 
   ul {
     display: flex;
+
+    li:first-child {
+      border-left: 0;
+    }
   }
+
   li {
-    // background-color: orange;
     list-style: none;
     border-left: 2px solid black;
     padding: 12px;

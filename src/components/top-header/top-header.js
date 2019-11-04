@@ -26,7 +26,6 @@ const SiteNavigationList = styled(TopHeaderLinksList)`
   background-color: red;
 `
 const SocialMediaContainer = styled.div`
-  // display: flex;
   img {
     height: 48px;
     width: 48px;
