@@ -24,6 +24,7 @@ const HeaderContainer = styled.div`
     letter-spacing: 1px;
     line-height: 24px;
     text-shadow: black 2px 2px 0;
+    cursor: pointer;
   }
   a:hover {
     color: rgba(221, 133, 0, 0.7);

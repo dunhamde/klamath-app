@@ -43,6 +43,7 @@ const HeaderContainer = styled.div`
     letter-spacing: 1px;
     text-shadow: black 2px 2px;
     overflow: hidden;
+    cursor: pointer;
   }
   a:hover {
     color: rgba(221, 133, 0, 0.7);

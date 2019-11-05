@@ -6,6 +6,7 @@ export const TopHeaderLinksList = () => {
       <li>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           onClick={() =>
             window.location.replace(
               'http://klamathtribes.org/tribal-government/tribal-council/',
@@ -18,6 +19,7 @@ export const TopHeaderLinksList = () => {
       <li>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           onClick={() =>
             window.location.replace(
               'http://klamathtribes.org/history/',
@@ -30,6 +32,7 @@ export const TopHeaderLinksList = () => {
       <li>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           onClick={() =>
             window.location.replace(
               'http://klamathtribes.org/administration/natural-resources/',
@@ -42,6 +45,7 @@ export const TopHeaderLinksList = () => {
       <li>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           onClick={() =>
             window.location.replace(
               'http://klamathtribes.org/contact-us/',
