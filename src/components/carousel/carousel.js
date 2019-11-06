@@ -4,22 +4,27 @@ import FishRestoGoalImgSrc from '../../../public/carousel-images/slide1-1800x500
 import TribalCouncilImgSrc from '../../../public/carousel-images/Tribal-Council-East-Good_Slider-1422x500.jpg'
 
 export const CarouselContainer = styled.div`
+  display: flex;
   max-width: 100%;
   height: 504px;
 `
 
 export const CarouselFrame = styled.div`
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
   border: 4px solid red;
   background-size: cover;
-  background-image: url(${props => props.backgroundImage});
+  // background-image: url(${props => props.backgroundImage});
+
+  ${CarouselContainer}:hover & {
+    background-image: url(${FishRestoGoalImgSrc});
+  }
 `
 
 export const Carousel = () => {
   return (
     <CarouselContainer>
       <CarouselFrame backgroundImage={FishRestoGoalImgSrc} />
+      <CarouselFrame backgroundImage={TribalCouncilImgSrc} />
     </CarouselContainer>
   )
 }
