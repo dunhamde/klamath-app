@@ -13,10 +13,11 @@ export const CarouselFrame = styled.div`
   width: 100%;
   border: 4px solid red;
   background-size: cover;
-  // background-image: url(${props => props.backgroundImage});
+  background-image: url(${props => props.backgroundImage});
 
   ${CarouselContainer}:hover & {
-    background-image: url(${FishRestoGoalImgSrc});
+    transform: translateX(500px);
+    transition: all 1s;
   }
 `
 
