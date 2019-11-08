@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import TopHeaderLinksList from './th-site-links-list.js'
 import TopHeaderSocialLinksList from './th-social-links-list.js'
@@ -60,14 +60,14 @@ const SocialMediaContainer = styled.div`
 
 export const SiteHeader = () => {
   return (
-    <Fragment>
+    <>
       <HeaderContainer>
         <SiteNavigationList />
         <SocialMediaContainer>
           <TopHeaderSocialLinksList />
         </SocialMediaContainer>
       </HeaderContainer>
-    </Fragment>
+    </>
   )
 }
 

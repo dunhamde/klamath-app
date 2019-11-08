@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import HeaderLogoSource from './../../../public/klamathtribes1200.png'
+import HeaderLogoSource from '../../../public/klamathtribes1200.png'
 import HeaderBannerSource from '../../../public/headerpic2.jpg'
-import FloatingHeaderLinksList from './fh-links-list.js'
+import { FloatingHeaderLinksList } from './fh-links-list'
 
 const HeaderLogo = styled.img`
   align-self: center;
@@ -68,13 +68,13 @@ const HeaderContainer = styled.div`
 
 export const TopHeader = () => {
   return (
-    <Fragment>
+    <>
       <HeaderContainer>
         <HeaderLogo src={HeaderLogoSource} />
 
         <FloatingHeaderLinksList />
       </HeaderContainer>
-    </Fragment>
+    </>
   )
 }
 
