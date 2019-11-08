@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid, jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
 import React from 'react'
 
 export const FloatingHeaderLinksList = () => (
@@ -5,72 +6,84 @@ export const FloatingHeaderLinksList = () => (
     <li>
       <a
         target="_blank"
-        onClick={() => window.location.replace('http://klamathtribes.org/news/')}
+        onClick={() =>
+          window.location.replace('http://klamathtribes.org/news/')
+        }
       >
-          News And Events
+        News And Events
       </a>
     </li>
     <li>
       <a
         target="_blank"
-        onClick={() => window.location.replace(
-          'http://klamathtribes.org/administration/',
-        )}
+        onClick={() =>
+          window.location.replace(
+            'http://klamathtribes.org/administration/',
+          )
+        }
       >
-          Tribal Departments
+        Tribal Departments
       </a>
     </li>
     <li>
       <a
         target="_blank"
-        onClick={() => window.location.replace(
-          'http://klamathtribes.org/job-openings/',
-        )}
+        onClick={() =>
+          window.location.replace(
+            'http://klamathtribes.org/job-openings/',
+          )
+        }
       >
-          Employment
+        Employment
       </a>
     </li>
     <li>
       <a
         target="_blank"
-        onClick={() => window.location.replace(
-          'http://klamathtribes.org/language/',
-        )}
+        onClick={() =>
+          window.location.replace(
+            'http://klamathtribes.org/language/',
+          )
+        }
       >
-          Language
+        Language
       </a>
     </li>
     <li>
       <a
         target="_blank"
-        onClick={() => window.location.replace(
-          'http://klamathtribes.org/history/',
-        )}
+        onClick={() =>
+          window.location.replace('http://klamathtribes.org/history/')
+        }
       >
-          Tribal History
+        Tribal History
       </a>
     </li>
     <li>
       <a
         target="_blank"
-        onClick={() => window.location.replace(
-          'http://klamathtribes.org/tribal-links/',
-        )}
+        onClick={() =>
+          window.location.replace(
+            'http://klamathtribes.org/tribal-links/',
+          )
+        }
       >
-          Tribal Permits And Schedules
+        Tribal Permits And Schedules
       </a>
     </li>
     <li>
       <a
         target="_blank"
-        onClick={() => window.location.replace(
-          'http://klamathtribes.org/contact-us/',
-        )}
+        onClick={() =>
+          window.location.replace(
+            'http://klamathtribes.org/contact-us/',
+          )
+        }
       >
-          Contact Us
+        Contact Us
       </a>
     </li>
   </ul>
-);
+)
 
-export default FloatingHeaderLinksList;
+export default FloatingHeaderLinksList

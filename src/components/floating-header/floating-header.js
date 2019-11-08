@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import HeaderLogoSource from '../../../public/klamathtribes1200.png'
 import HeaderBannerSource from '../../../public/headerpic2.jpg'
-import { FloatingHeaderLinksList } from './fh-links-list'
+import FloatingHeaderLinksList from './fh-links-list'
 
 const HeaderLogo = styled.img`
   align-self: center;

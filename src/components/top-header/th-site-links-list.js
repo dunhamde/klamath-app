@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid, jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
+
 import React from 'react'
 
 export const TopHeaderLinksList = () => {
@@ -5,8 +7,6 @@ export const TopHeaderLinksList = () => {
     <ul>
       <li>
         <a
-          target="_blank"
-          rel="noopener noreferrer"
           onClick={() =>
             window.location.replace(
               'http://klamathtribes.org/tribal-government/tribal-council/',
@@ -18,8 +18,6 @@ export const TopHeaderLinksList = () => {
       </li>
       <li>
         <a
-          target="_blank"
-          rel="noopener noreferrer"
           onClick={() =>
             window.location.replace(
               'http://klamathtribes.org/history/',
@@ -31,8 +29,6 @@ export const TopHeaderLinksList = () => {
       </li>
       <li>
         <a
-          target="_blank"
-          rel="noopener noreferrer"
           onClick={() =>
             window.location.replace(
               'http://klamathtribes.org/administration/natural-resources/',
@@ -44,8 +40,6 @@ export const TopHeaderLinksList = () => {
       </li>
       <li>
         <a
-          target="_blank"
-          rel="noopener noreferrer"
           onClick={() =>
             window.location.replace(
               'http://klamathtribes.org/contact-us/',

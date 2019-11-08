@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import TopHeaderLinksList from './th-site-links-list.js'
-import TopHeaderSocialLinksList from './th-social-links-list.js'
+import TopHeaderLinksList from './th-site-links-list'
+import TopHeaderSocialLinksList from './th-social-links-list'
 
 const HeaderContainer = styled.div`
   display: flex;
