@@ -21,10 +21,71 @@ export const CarouselFrame = styled.div`
   }
 `
 
+export const CarouselTrack = styled.div``
+export const CarouselControls = styled.div``
+export const CarouselIndicators = styled.div``
+
 export const Carousel = () => (
   <CarouselContainer>
-    <CarouselFrame backgroundImage={FishRestoGoalImgSrc} />
-    <CarouselFrame backgroundImage={TribalCouncilImgSrc} />
+    <CarouselTrack>
+      <input
+        type="radio"
+        id="1"
+        name="activator"
+        checked="checked"
+        className="carousel__activator"
+      />
+
+      <input
+        type="radio"
+        id="1"
+        name="activator"
+        className="carousel__activator"
+      />
+      <input
+        type="radio"
+        id="1"
+        name="activator"
+        className="carousel__activator"
+      />
+      <CarouselControls>
+        <label
+          htmlFor="2"
+          className="carousel__control carousel__control--forward"
+        />
+        <label
+          htmlFor="3"
+          className="carousel__control carousel__control--backward"
+        />
+      </CarouselControls>
+      <CarouselControls>
+        <label
+          htmlFor="3"
+          className="carousel__control carousel__control--forward"
+        />
+        <label
+          htmlFor="1"
+          className="carousel__control carousel__control--backward"
+        />
+      </CarouselControls>
+      <CarouselControls>
+        <label
+          htmlFor="1"
+          className="carousel__control carousel__control--forward"
+        />
+        <label
+          htmlFor="2"
+          className="carousel__control carousel__control--backward"
+        />
+      </CarouselControls>
+      <CarouselFrame backgroundImage={FishRestoGoalImgSrc} />
+      <CarouselFrame backgroundImage={TribalCouncilImgSrc} />
+      <CarouselIndicators>
+        <label htmlFor="1" className="carousel__indicator" />
+        <label htmlFor="2" className="carousel__indicator" />
+        <label htmlFor="3" className="carousel__indicator" />
+      </CarouselIndicators>
+    </CarouselTrack>
   </CarouselContainer>
 )
 
