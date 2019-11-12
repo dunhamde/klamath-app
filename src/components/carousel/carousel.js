@@ -9,83 +9,49 @@ export const CarouselContainer = styled.div`
   height: 504px;
 `
 
-export const CarouselFrame = styled.div`
+export const CarouselSlide = styled.div`
   width: 100%;
   border: 4px solid red;
   background-size: cover;
   background-image: url(${props => props.backgroundImage});
-
-  ${CarouselContainer}:hover & {
-    transform: translateX(500px);
-    transition: all 1s;
-  }
 `
 
+export const ControlRadio = styled.input``
+export const ControlLabel = styled.label``
 export const CarouselTrack = styled.div``
 export const CarouselControls = styled.div``
 export const CarouselIndicators = styled.div``
 
 export const Carousel = () => (
   <CarouselContainer>
-    <CarouselTrack>
-      <input
+    <CarouselControls>
+      <ControlRadio
         type="radio"
         id="1"
         name="activator"
         checked="checked"
-        className="carousel__activator"
       />
 
-      <input
-        type="radio"
-        id="1"
-        name="activator"
-        className="carousel__activator"
+      <ControlRadio type="radio" id="2" name="activator" />
+      <ControlRadio type="radio" id="3" name="activator" />
+      <ControlLabel
+        htmlFor="1"
+        className="carousel__control carousel__control--forward"
       />
-      <input
-        type="radio"
-        id="1"
-        name="activator"
-        className="carousel__activator"
+      <ControlLabel
+        htmlFor="2"
+        className="carousel__control carousel__control--backward"
       />
-      <CarouselControls>
-        <label
-          htmlFor="2"
-          className="carousel__control carousel__control--forward"
-        />
-        <label
-          htmlFor="3"
-          className="carousel__control carousel__control--backward"
-        />
-      </CarouselControls>
-      <CarouselControls>
-        <label
-          htmlFor="3"
-          className="carousel__control carousel__control--forward"
-        />
-        <label
-          htmlFor="1"
-          className="carousel__control carousel__control--backward"
-        />
-      </CarouselControls>
-      <CarouselControls>
-        <label
-          htmlFor="1"
-          className="carousel__control carousel__control--forward"
-        />
-        <label
-          htmlFor="2"
-          className="carousel__control carousel__control--backward"
-        />
-      </CarouselControls>
-      <CarouselFrame backgroundImage={FishRestoGoalImgSrc} />
-      <CarouselFrame backgroundImage={TribalCouncilImgSrc} />
-      <CarouselIndicators>
-        <label htmlFor="1" className="carousel__indicator" />
-        <label htmlFor="2" className="carousel__indicator" />
-        <label htmlFor="3" className="carousel__indicator" />
-      </CarouselIndicators>
+    </CarouselControls>
+    <CarouselTrack>
+      <CarouselSlide backgroundImage={FishRestoGoalImgSrc} />
+      <CarouselSlide backgroundImage={TribalCouncilImgSrc} />
     </CarouselTrack>
+    <CarouselIndicators>
+      <ControlLabel htmlFor="1" className="carousel__indicator" />
+      <ControlLabel htmlFor="2" className="carousel__indicator" />
+      <ControlLabel htmlFor="3" className="carousel__indicator" />
+    </CarouselIndicators>
   </CarouselContainer>
 )
 
