@@ -16,35 +16,58 @@ export const CarouselContainer = styled.div`
   justify-content: center;
 `
 
-export const CarouselControls = styled.div`
+export const CarouselDirectionControls = styled.div`
   position: absolute;
   display: flex;
   justify-content: space-between;
   width: 100%;
 `
 
-export const CarouselImage = styled.img`
-  width: 100%;
+export const CarouselIndicatorControls = styled.div`
+  position: absolute;
+  display: flex;
+  align-self: end;
+  margin-bottom: 12px;
 `
 
-export const ControlLabel = styled.div`
+export const CarouselImage = styled.img`
+  width: 100%;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+`
+
+export const DirectionControl = styled.div`
   width: 36px;
   height: 36px;
   z-index: 2;
   transform: ${props =>
     props.backward ? 'rotate(-135deg)' : 'rotate(45deg)'};
   margin: 24px;
-  border-width: 5px 5px 0 0;
+  border-width: 12px 12px 0 0;
   border-style: solid;
   border-color: #fafafa;
   opacity: 0.5;
-  outline: 0;
   cursor: pointer;
   :hover {
     opacity: 1;
   }
 `
-export const CarouselIndicators = styled.div``
+export const IndicatorControl = styled.div`
+  width: 24px;
+  height: 24px;
+  background-color: #fafafa;
+  border-radius: 100%;
+  margin: 12px;
+  opacity: ${props => (props.order === props.activeImage ? 1 : 0.5)};
+  cursor: pointer;
+  :hover {
+    opacity: 1;
+  }
+`
 
 export const Carousel = () => {
   const [activeImage, setActiveImage] = useState(0)
@@ -59,14 +82,14 @@ export const Carousel = () => {
   ]
   return (
     <CarouselContainer>
-      <CarouselControls>
-        <ControlLabel
+      <CarouselDirectionControls>
+        <DirectionControl
           backward
           onClick={() =>
             setActiveImage(activeImage - 1 >= 0 ? activeImage - 1 : 0)
           }
         />
-        <ControlLabel
+        <DirectionControl
           forward
           onClick={() =>
             setActiveImage(
@@ -76,14 +99,20 @@ export const Carousel = () => {
             )
           }
         />
-      </CarouselControls>
+      </CarouselDirectionControls>
       <CarouselImage src={carouselImages[activeImage]} />
-
-      {/* <CarouselIndicators>
-      <ControlLabel htmlFor="1" className="carousel__indicator" />
-      <ControlLabel htmlFor="2" className="carousel__indicator" />
-      <ControlLabel htmlFor="3" className="carousel__indicator" />
-    </CarouselIndicators> */}
+      <CarouselIndicatorControls>
+        {carouselImages.map((currElement, index) => {
+          return (
+            <IndicatorControl
+              onClick={() => setActiveImage(index)}
+              key={currElement}
+              order={index}
+              activeImage={activeImage}
+            />
+          )
+        })}
+      </CarouselIndicatorControls>
     </CarouselContainer>
   )
 }
