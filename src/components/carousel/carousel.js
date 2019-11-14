@@ -36,9 +36,19 @@ export const CarouselImage = styled.img`
 
 export const CarouselTitle = styled.div`
   position: absolute;
+  margin-bottom: 60px;
+  font-size: 32px;
+  line-height: 48px;
+  color: white;
+  font-weight: 700;
 `
 export const CarouselCopy = styled.div`
   position: absolute;
+  margin-top: 60px;
+  font-size: 24px;
+  line-height: 36px;
+  color: white;
+  font-weight: 500;
 `
 export const CarouselLink = styled.div``
 
