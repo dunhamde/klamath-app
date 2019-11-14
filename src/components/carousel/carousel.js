@@ -1,12 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import FishRestoGoalImgSrc from '../../../public/carousel-images/edited-slide1.jpg'
-import TribalCouncilImgSrc from '../../../public/carousel-images/Tribal-Council-East-Good_Slider-1422x500.jpg'
-import LowWaterLevelImgSrc from '../../../public/carousel-images/edited-slime-edge.jpg'
-import AlgaeImgSrc from '../../../public/carousel-images/edited-Ron_Larson_AFA_3S.jpg'
-import FisheryCollapseImgSrc from '../../../public/carousel-images/edited-deadfish.jpg'
-import SolutionImgSrc from '../../../public/carousel-images/edited-yuck-1.jpg'
-import CwaamImgSrc from '../../../public/carousel-images/edited-cwaamdark.jpg'
+import carouselContent from './carousel-content'
 
 export const CarouselContainer = styled.div`
   display: flex;
@@ -40,6 +34,14 @@ export const CarouselImage = styled.img`
   user-select: none;
 `
 
+export const CarouselTitle = styled.div`
+  position: absolute;
+`
+export const CarouselCopy = styled.div`
+  position: absolute;
+`
+export const CarouselLink = styled.div``
+
 export const DirectionControl = styled.div`
   width: 36px;
   height: 36px;
@@ -71,42 +73,41 @@ export const IndicatorControl = styled.div`
 
 export const Carousel = () => {
   const [activeImage, setActiveImage] = useState(0)
-  const carouselImages = [
-    FishRestoGoalImgSrc,
-    TribalCouncilImgSrc,
-    LowWaterLevelImgSrc,
-    AlgaeImgSrc,
-    FisheryCollapseImgSrc,
-    SolutionImgSrc,
-    CwaamImgSrc,
-  ]
   return (
     <CarouselContainer>
       <CarouselDirectionControls>
         <DirectionControl
           backward
           onClick={() =>
-            setActiveImage(activeImage - 1 >= 0 ? activeImage - 1 : 0)
+            setActiveImage(
+              activeImage - 1 >= 0
+                ? activeImage - 1
+                : carouselContent.length - 1,
+            )
           }
         />
         <DirectionControl
           forward
           onClick={() =>
             setActiveImage(
-              activeImage + 1 <= carouselImages.length - 1
+              activeImage + 1 <= carouselContent.length - 1
                 ? activeImage + 1
-                : carouselImages.length - 1,
+                : 0,
             )
           }
         />
       </CarouselDirectionControls>
-      <CarouselImage src={carouselImages[activeImage]} />
+      <CarouselImage src={carouselContent[activeImage].image} />
+      <CarouselTitle>
+        {carouselContent[activeImage].title}
+      </CarouselTitle>
+      <CarouselCopy>{carouselContent[activeImage].copy}</CarouselCopy>
       <CarouselIndicatorControls>
-        {carouselImages.map((currElement, index) => {
+        {carouselContent.map((currElement, index) => {
           return (
             <IndicatorControl
               onClick={() => setActiveImage(index)}
-              key={currElement}
+              key={`${currElement.title}-${currElement.linkCopy}`}
               order={index}
               activeImage={activeImage}
             />
