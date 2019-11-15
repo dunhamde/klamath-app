@@ -10,20 +10,6 @@ export const CarouselContainer = styled.div`
   justify-content: center;
 `
 
-export const CarouselDirectionControls = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-`
-
-export const CarouselIndicatorControls = styled.div`
-  position: absolute;
-  display: flex;
-  align-self: end;
-  margin-bottom: 12px;
-`
-
 export const CarouselImage = styled.img`
   width: 100%;
   -webkit-user-select: none; /* Chrome/Safari */
@@ -35,30 +21,34 @@ export const CarouselImage = styled.img`
 `
 
 export const CarouselTitle = styled.div`
-  position: absolute;
-  margin-bottom: 60px;
+  /* position: absolute; */
+  /* margin-bottom: 60px; */
   font-size: 32px;
   line-height: 48px;
   color: white;
   font-weight: 700;
 `
 export const CarouselCopy = styled.div`
-  position: absolute;
-  margin-top: 60px;
+  /* position: absolute; */
+  /* margin-top: 60px; */
   font-size: 24px;
   line-height: 36px;
   color: white;
   font-weight: 500;
 `
-export const CarouselLink = styled.div``
+export const CarouselLink = styled.a`
+  /* position: absolute; */
+  background-color: red;
+  height: 24px;
+  width: 24px;
+`
 
 export const DirectionControl = styled.div`
+  align-self: center;
   width: 36px;
   height: 36px;
-  z-index: 2;
   transform: ${props =>
     props.backward ? 'rotate(-135deg)' : 'rotate(45deg)'};
-  margin: 24px;
   border-width: 12px 12px 0 0;
   border-style: solid;
   border-color: #fafafa;
@@ -68,6 +58,11 @@ export const DirectionControl = styled.div`
     opacity: 1;
   }
 `
+export const DirectionControlContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
 export const IndicatorControl = styled.div`
   width: 24px;
   height: 24px;
@@ -80,50 +75,104 @@ export const IndicatorControl = styled.div`
     opacity: 1;
   }
 `
+export const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+export const CarouselIndicatorControls = styled.div`
+  display: flex;
+`
+export const CarouselContentIndicatorsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  ${ContentContainer} {
+    flex: 5;
+  }
+
+  ${CarouselIndicatorControls} {
+    flex: 1;
+  }
+`
+export const CarouselContentContainer = styled.div`
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  ${DirectionControlContainer} {
+    flex: 10;
+  }
+
+  ${CarouselContentIndicatorsContainer} {
+    flex: 80;
+  }
+`
 
 export const Carousel = () => {
   const [activeImage, setActiveImage] = useState(0)
   return (
     <CarouselContainer>
-      <CarouselDirectionControls>
-        <DirectionControl
-          backward
-          onClick={() =>
-            setActiveImage(
-              activeImage - 1 >= 0
-                ? activeImage - 1
-                : carouselContent.length - 1,
-            )
-          }
-        />
-        <DirectionControl
-          forward
-          onClick={() =>
-            setActiveImage(
-              activeImage + 1 <= carouselContent.length - 1
-                ? activeImage + 1
-                : 0,
-            )
-          }
-        />
-      </CarouselDirectionControls>
       <CarouselImage src={carouselContent[activeImage].image} />
-      <CarouselTitle>
-        {carouselContent[activeImage].title}
-      </CarouselTitle>
-      <CarouselCopy>{carouselContent[activeImage].copy}</CarouselCopy>
-      <CarouselIndicatorControls>
-        {carouselContent.map((currElement, index) => {
-          return (
-            <IndicatorControl
-              onClick={() => setActiveImage(index)}
-              key={`${currElement.title}-${currElement.linkCopy}`}
-              order={index}
-              activeImage={activeImage}
-            />
-          )
-        })}
-      </CarouselIndicatorControls>
+      <CarouselContentContainer>
+        <DirectionControlContainer>
+          <DirectionControl
+            backward
+            onClick={() =>
+              setActiveImage(
+                activeImage - 1 >= 0
+                  ? activeImage - 1
+                  : carouselContent.length - 1,
+              )
+            }
+          />
+        </DirectionControlContainer>
+        <CarouselContentIndicatorsContainer>
+          <ContentContainer>
+            <CarouselTitle>
+              {carouselContent[activeImage].title}
+            </CarouselTitle>
+            <CarouselCopy>
+              {carouselContent[activeImage].copy}
+            </CarouselCopy>
+            <CarouselLink
+              href={carouselContent[activeImage].linkTarget}
+            >
+              {carouselContent[activeImage].linkCopy}
+            </CarouselLink>
+          </ContentContainer>
+          <CarouselIndicatorControls>
+            {carouselContent.map((currElement, index) => {
+              return (
+                <IndicatorControl
+                  onClick={() => setActiveImage(index)}
+                  key={`${currElement.title}-${currElement.linkCopy}`}
+                  order={index}
+                  activeImage={activeImage}
+                />
+              )
+            })}
+          </CarouselIndicatorControls>
+        </CarouselContentIndicatorsContainer>
+        <DirectionControlContainer>
+          <DirectionControl
+            forward
+            onClick={() =>
+              setActiveImage(
+                activeImage + 1 <= carouselContent.length - 1
+                  ? activeImage + 1
+                  : 0,
+              )
+            }
+          />
+        </DirectionControlContainer>
+      </CarouselContentContainer>
     </CarouselContainer>
   )
 }
