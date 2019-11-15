@@ -9,6 +9,7 @@ import MembersCtaSection from './components/members-cta-section/members-cta-sect
 const AppContainer = styled.div`
   margin: 16px;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: darkblue;
 `
 
 const App = () => (
