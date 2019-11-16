@@ -6,7 +6,6 @@ describe('FloatingHeaderLinksList', () => {
   test('renders News And Events', () => {
     const { getByText } = render(<FloatingHeaderLinksList />)
 
-    // as suggested by Giorgio Polvara a more idiomatic way:
     expect(getByText('News And Events'))
   })
 })
