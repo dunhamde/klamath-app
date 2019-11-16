@@ -71,7 +71,6 @@ export const TopHeader = () => {
     <>
       <HeaderContainer>
         <HeaderLogo src={HeaderLogoSource} />
-
         <FloatingHeaderLinksList />
       </HeaderContainer>
     </>
