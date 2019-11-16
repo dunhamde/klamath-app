@@ -12,8 +12,7 @@ export const MembersCtaSectionContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-    padding: 0;
-    margin: 60px 0;
+    padding: 60px 0;
 
     li:nth-child(1) {
       background: linear-gradient(lightblue, blue);
@@ -27,8 +26,8 @@ export const MembersCtaSectionContainer = styled.div`
   }
 
   li {
+    border: 2px solid rgb(59, 57, 52);
     border-radius: 16px;
-
     font-size: 24px;
     line-height: 48px;
     padding: 0 36px;
