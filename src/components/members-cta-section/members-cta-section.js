@@ -6,6 +6,7 @@ export const MembersCtaSectionContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   ul {
     width: 80%;
     display: flex;
@@ -13,6 +14,7 @@ export const MembersCtaSectionContainer = styled.div`
     list-style: none;
     padding: 0;
     margin: 60px 0;
+    border-bottom: 2px solid gray;
 
     li:nth-child(1) {
       background: linear-gradient(lightblue, blue);

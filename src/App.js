@@ -5,6 +5,7 @@ import FloatingHeader from './components/floating-header/floating-header'
 import TopHeader from './components/top-header/top-header'
 import Carousel from './components/carousel/carousel'
 import MembersCtaSection from './components/members-cta-section/members-cta-section'
+import MedallionSection from './components/medallion-section/medallion-section'
 
 const AppContainer = styled.div`
   margin: 16px;
@@ -18,6 +19,7 @@ const App = () => (
     <FloatingHeader />
     <Carousel />
     <MembersCtaSection />
+    <MedallionSection />
   </AppContainer>
 )
 

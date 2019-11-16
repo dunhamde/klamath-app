@@ -9,8 +9,10 @@ const HeaderContainer = styled.div`
   background-image: linear-gradient(rgb(0, 0, 255), rgb(0, 128, 0));
   max-width: 100%;
   height: 48px;
+
   ul {
     display: flex;
+    padding: 0;
   }
   li {
     list-style: none;
@@ -60,14 +62,12 @@ const SocialMediaContainer = styled.div`
 
 export const SiteHeader = () => {
   return (
-    <>
-      <HeaderContainer>
-        <SiteNavigationList />
-        <SocialMediaContainer>
-          <TopHeaderSocialLinksList />
-        </SocialMediaContainer>
-      </HeaderContainer>
-    </>
+    <HeaderContainer>
+      <SiteNavigationList />
+      <SocialMediaContainer>
+        <TopHeaderSocialLinksList />
+      </SocialMediaContainer>
+    </HeaderContainer>
   )
 }
 
