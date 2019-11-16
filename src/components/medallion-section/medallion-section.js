@@ -4,9 +4,11 @@ import MedallionList from './medallion-list'
 
 export const MedallionListContainer = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   ul {
-    width: 80%;
+    display: flex;
   }
 `
 

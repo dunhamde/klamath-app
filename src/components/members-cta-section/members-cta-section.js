@@ -14,7 +14,6 @@ export const MembersCtaSectionContainer = styled.div`
     list-style: none;
     padding: 0;
     margin: 60px 0;
-    border-bottom: 2px solid gray;
 
     li:nth-child(1) {
       background: linear-gradient(lightblue, blue);
