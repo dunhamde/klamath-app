@@ -7,6 +7,7 @@ import Carousel from './components/carousel/carousel'
 import MembersCtaSection from './components/members-cta-section/members-cta-section'
 import MedallionSection from './components/medallion-section/medallion-section'
 import CwaamCta from './components/cwaam-cta/cwaam-cta'
+import Footer from './components/footer/footer'
 
 const AppContainer = styled.div`
   margin: 16px;
@@ -23,6 +24,7 @@ const App = () => (
     <MembersCtaSection />
     <MedallionSection />
     <CwaamCta />
+    <Footer />
   </AppContainer>
 )
 
