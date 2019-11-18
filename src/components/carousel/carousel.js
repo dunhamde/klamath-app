@@ -152,6 +152,8 @@ export const Carousel = () => {
               {carouselContent[activeImage].copy}
             </CarouselCopy>
             <CarouselLink
+              target="_blank"
+              rel="noopener noreferrer"
               href={carouselContent[activeImage].linkTarget}
             >
               {carouselContent[activeImage].linkCopy}

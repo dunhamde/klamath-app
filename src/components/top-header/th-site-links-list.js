@@ -7,44 +7,36 @@ export const TopHeaderLinksList = () => {
     <ul>
       <li>
         <a
-          onClick={() =>
-            window.location.replace(
-              'http://klamathtribes.org/tribal-government/tribal-council/',
-            )
-          }
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://klamathtribes.org/tribal-government/tribal-council/"
         >
           Klamath Tribal Council
         </a>
       </li>
       <li>
         <a
-          onClick={() =>
-            window.location.replace(
-              'http://klamathtribes.org/history/',
-            )
-          }
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://klamathtribes.org/history/"
         >
           History
         </a>
       </li>
       <li>
         <a
-          onClick={() =>
-            window.location.replace(
-              'http://klamathtribes.org/administration/natural-resources/',
-            )
-          }
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://klamathtribes.org/administration/natural-resources/"
         >
           Hunting and Camping
         </a>
       </li>
       <li>
         <a
-          onClick={() =>
-            window.location.replace(
-              'http://klamathtribes.org/contact-us/',
-            )
-          }
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://klamathtribes.org/contact-us/"
         >
           Contact Us
         </a>

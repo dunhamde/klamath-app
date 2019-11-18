@@ -3,7 +3,11 @@ import React from 'react'
 export const MedallionsList = () => (
   <ul>
     <li>
-      <a href="http://klamathtribes.org/news/">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="http://klamathtribes.org/news/"
+      >
         <img
           src="http://klamathtribes.org/wp-content/uploads/2018/05/whahappen-1.png"
           alt="Whats Happening"
@@ -11,7 +15,11 @@ export const MedallionsList = () => (
       </a>
     </li>
     <li>
-      <a href="http://klamathtribes.org/tribal-government/tribal-council/">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="http://klamathtribes.org/tribal-government/tribal-council/"
+      >
         <img
           src="http://klamathtribes.org/wp-content/uploads/2018/05/council.png"
           alt="Tribal Council"
@@ -19,7 +27,11 @@ export const MedallionsList = () => (
       </a>
     </li>
     <li>
-      <a href="http://www.klamathtribalhealth.org/">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="http://www.klamathtribalhealth.org/"
+      >
         <img
           src="http://klamathtribes.org/wp-content/uploads/2018/05/health.png"
           alt="Tribal Health"
@@ -27,7 +39,11 @@ export const MedallionsList = () => (
       </a>
     </li>
     <li>
-      <a href="http://klamoyacasino.com/">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="http://klamoyacasino.com/"
+      >
         <img
           src="http://klamathtribes.org/wp-content/uploads/2018/05/klamoya.png"
           alt="Klamoya Casino"

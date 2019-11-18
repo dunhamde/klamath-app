@@ -26,6 +26,7 @@ const HeaderContainer = styled.div`
     letter-spacing: 1px;
     line-height: 24px;
     text-shadow: black 2px 2px 0;
+    text-decoration: none;
     cursor: pointer;
   }
   a:hover {

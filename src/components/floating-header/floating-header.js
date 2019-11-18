@@ -37,6 +37,7 @@ const HeaderContainer = styled.div`
   }
   a {
     text-transform: uppercase;
+    text-decoration: none;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     color: white;
     font-weight: 600;

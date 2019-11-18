@@ -48,7 +48,11 @@ export const CwaamCta = () => {
     <CwaamCtaContainer>
       <ContentContainer>
         <h2>{ctaTitle}</h2>
-        <a href="http://klamathtribes.org/restoring-fish-and-a-dying-lake/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://klamathtribes.org/restoring-fish-and-a-dying-lake/"
+        >
           Press Release and Filing Information
         </a>
         <iframe
@@ -60,13 +64,25 @@ export const CwaamCta = () => {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
-        <a href="http://klamathtribes.org/video-2/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://klamathtribes.org/video-2/"
+        >
           More Tribal Videos
         </a>
-        <a href="http://klamathtribes.org/quail-trail-bus-schedule/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://klamathtribes.org/quail-trail-bus-schedule/"
+        >
           Looking for BUS Schedules?
         </a>
-        <a href="http://klamathtribes.org/word-of-the-day/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://klamathtribes.org/word-of-the-day/"
+        >
           Word of the Day!
         </a>
       </ContentContainer>

@@ -5,10 +5,9 @@ export const FloatingHeaderLinksList = () => (
   <ul>
     <li>
       <a
-        target="_blank"
-        onClick={() =>
-          window.location.replace('http://klamathtribes.org/news/')
-        }
+        target="_tab"
+        rel="noopener noreferrer"
+        href="http://klamathtribes.org/news/"
       >
         News And Events
       </a>
@@ -16,11 +15,8 @@ export const FloatingHeaderLinksList = () => (
     <li>
       <a
         target="_blank"
-        onClick={() =>
-          window.location.replace(
-            'http://klamathtribes.org/administration/',
-          )
-        }
+        rel="noopener noreferrer"
+        href="http://klamathtribes.org/administration/"
       >
         Tribal Departments
       </a>
@@ -28,11 +24,8 @@ export const FloatingHeaderLinksList = () => (
     <li>
       <a
         target="_blank"
-        onClick={() =>
-          window.location.replace(
-            'http://klamathtribes.org/job-openings/',
-          )
-        }
+        rel="noopener noreferrer"
+        href="http://klamathtribes.org/job-openings/"
       >
         Employment
       </a>
@@ -40,11 +33,8 @@ export const FloatingHeaderLinksList = () => (
     <li>
       <a
         target="_blank"
-        onClick={() =>
-          window.location.replace(
-            'http://klamathtribes.org/language/',
-          )
-        }
+        rel="noopener noreferrer"
+        href="http://klamathtribes.org/language/"
       >
         Language
       </a>
@@ -52,9 +42,8 @@ export const FloatingHeaderLinksList = () => (
     <li>
       <a
         target="_blank"
-        onClick={() =>
-          window.location.replace('http://klamathtribes.org/history/')
-        }
+        rel="noopener noreferrer"
+        href="http://klamathtribes.org/history/"
       >
         Tribal History
       </a>
@@ -62,11 +51,8 @@ export const FloatingHeaderLinksList = () => (
     <li>
       <a
         target="_blank"
-        onClick={() =>
-          window.location.replace(
-            'http://klamathtribes.org/tribal-links/',
-          )
-        }
+        rel="noopener noreferrer"
+        href="http://klamathtribes.org/tribal-links/"
       >
         Tribal Permits And Schedules
       </a>
@@ -74,11 +60,8 @@ export const FloatingHeaderLinksList = () => (
     <li>
       <a
         target="_blank"
-        onClick={() =>
-          window.location.replace(
-            'http://klamathtribes.org/contact-us/',
-          )
-        }
+        rel="noopener noreferrer"
+        href="http://klamathtribes.org/contact-us/"
       >
         Contact Us
       </a>
