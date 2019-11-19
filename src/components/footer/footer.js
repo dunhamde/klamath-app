@@ -5,8 +5,14 @@ import TopHeaderSocialLinksList from '../top-header/th-social-links-list'
 
 export const CreditsFooter = styled.div`
   display: flex;
-  align-items: start;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
+
+  @media (min-width: 1000px) {
+    align-items: start;
+    flex-direction: row;
+  }
 `
 export const FooterItemContainer = styled.div`
   img {

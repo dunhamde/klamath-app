@@ -37,6 +37,15 @@ export const ContentContainer = styled.div`
   }
   iframe {
     margin: 36px 0;
+    height: 250px;
+    width: 300px;
+  }
+
+  @media (min-width: 1000px) {
+    iframe {
+      height: 315px;
+      width: 560px;
+    }
   }
 `
 

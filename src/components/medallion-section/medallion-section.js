@@ -9,8 +9,13 @@ export const MedallionListContainer = styled.div`
 
   ul {
     display: flex;
+    flex-direction: column;
     list-style: none;
     padding: 60px 0;
+
+    @media (min-width: 1000px) {
+      flex-direction: row;
+    }
   }
 `
 
