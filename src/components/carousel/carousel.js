@@ -12,6 +12,7 @@ export const CarouselContainer = styled.div`
 
 export const CarouselImage = styled.img`
   width: 100%;
+  min-height: 300px;
   -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
@@ -20,36 +21,64 @@ export const CarouselImage = styled.img`
   user-select: none;
 `
 
-export const CarouselTitle = styled.div`
-  font-size: 32px;
-  line-height: 48px;
+export const Title = styled.h2`
+  font-size: 18px;
+  line-height: 24px;
   color: white;
-  font-weight: 700;
+
+  @media (min-width: 700px) {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  @media (min-width: 1500px) {
+    font-size: 32px;
+    line-height: 48px;
+  }
 `
-export const CarouselCopy = styled.div`
-  font-size: 24px;
-  line-height: 36px;
+export const TitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const Copy = styled.h3`
+  font-size: 14px;
   color: white;
-  font-weight: 500;
+
+  @media (min-width: 700px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  @media (min-width: 1500px) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 `
 export const CarouselLink = styled.a`
   display: inline-block;
-  margin-top: 24px;
   background-color: rgba(22, 83, 137, 0.8);
   color: white;
   text-decoration: none;
-  font-weight: 400;
-  line-height: 1.25;
-  padding: 12px 24px;
+  padding: 6px 12px;
   border-radius: 2px;
   border: 2px solid rgba(22, 83, 137, 0.8);
   text-transform: uppercase;
   font-family: sans-serif;
   letter-spacing: 1px;
+  font-size: 14px;
 
   :hover {
     background-color: rgb(22, 83, 137);
     border-color: rgb(22, 83, 137);
+  }
+
+  @media (min-width: 700px) {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 12px 24px;
+  }
+  @media (min-width: 1500px) {
+    font-size: 24px;
+    line-height: 24px;
   }
 `
 
@@ -74,40 +103,43 @@ export const DirectionControlContainer = styled.div`
 `
 
 export const IndicatorControl = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 12px;
   background-color: #fafafa;
   border-radius: 100%;
-  margin: 12px;
+  margin: 0 6px;
   opacity: ${props => (props.order === props.activeImage ? 1 : 0.5)};
   cursor: pointer;
   :hover {
     opacity: 1;
   }
-`
-export const ContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
 
-export const CarouselIndicatorControls = styled.div`
-  display: flex;
-`
-export const CarouselContentIndicatorsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  ${ContentContainer} {
-    flex: 5;
+  @media (min-width: 700px) {
+    width: 24px;
+    height: 24px;
+    margin: 0 12px;
   }
+`
 
-  ${CarouselIndicatorControls} {
-    flex: 1;
+export const IndicatorControlsContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+export const LinkAndIndicatorsContainer = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+`
+export const ContentIndicatorsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  
+  ${TitleContainer}, ${Copy}, ${LinkAndIndicatorsContainer} {
+    flex: 1
   }
 `
 export const CarouselContentContainer = styled.div`
@@ -115,14 +147,6 @@ export const CarouselContentContainer = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
-
-  ${DirectionControlContainer} {
-    flex: 10;
-  }
-
-  ${CarouselContentIndicatorsContainer} {
-    flex: 80;
-  }
 `
 
 export const Carousel = () => {
@@ -143,14 +167,12 @@ export const Carousel = () => {
             }
           />
         </DirectionControlContainer>
-        <CarouselContentIndicatorsContainer>
-          <ContentContainer>
-            <CarouselTitle>
-              {carouselContent[activeImage].title}
-            </CarouselTitle>
-            <CarouselCopy>
-              {carouselContent[activeImage].copy}
-            </CarouselCopy>
+        <ContentIndicatorsContainer>
+          <TitleContainer>
+            <Title>{carouselContent[activeImage].title}</Title>
+          </TitleContainer>
+          <Copy>{carouselContent[activeImage].copy}</Copy>
+          <LinkAndIndicatorsContainer>
             <CarouselLink
               target="_blank"
               rel="noopener noreferrer"
@@ -158,20 +180,20 @@ export const Carousel = () => {
             >
               {carouselContent[activeImage].linkCopy}
             </CarouselLink>
-          </ContentContainer>
-          <CarouselIndicatorControls>
-            {carouselContent.map((currElement, index) => {
-              return (
-                <IndicatorControl
-                  onClick={() => setActiveImage(index)}
-                  key={`${currElement.title}-${currElement.linkCopy}`}
-                  order={index}
-                  activeImage={activeImage}
-                />
-              )
-            })}
-          </CarouselIndicatorControls>
-        </CarouselContentIndicatorsContainer>
+            <IndicatorControlsContainer>
+              {carouselContent.map((currElement, index) => {
+                return (
+                  <IndicatorControl
+                    onClick={() => setActiveImage(index)}
+                    key={`${currElement.title}-${currElement.linkCopy}`}
+                    order={index}
+                    activeImage={activeImage}
+                  />
+                )
+              })}
+            </IndicatorControlsContainer>
+          </LinkAndIndicatorsContainer>
+        </ContentIndicatorsContainer>
         <DirectionControlContainer>
           <DirectionControl
             forward

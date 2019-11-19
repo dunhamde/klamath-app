@@ -10,7 +10,6 @@ import CwaamCta from './components/cwaam-cta/cwaam-cta'
 import Footer from './components/footer/footer'
 
 const AppContainer = styled.div`
-  margin: 16px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(245, 237, 221);
   border: 2px solid rgb(59, 57, 52);
