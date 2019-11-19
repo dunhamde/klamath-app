@@ -26,12 +26,8 @@ export const Title = styled.h2`
   line-height: 24px;
   color: white;
 
-  @media (min-width: 700px) {
-    font-size: 32px;
-    line-height: 48px;
-  }
-  @media (min-width: 1500px) {
-    font-size: 32px;
+  @media (min-width: 1000px) {
+    font-size: 36px;
     line-height: 48px;
   }
 `
@@ -44,13 +40,9 @@ export const Copy = styled.h3`
   font-size: 14px;
   color: white;
 
-  @media (min-width: 700px) {
-    font-size: 18px;
-    line-height: 24px;
-  }
-  @media (min-width: 1500px) {
+  @media (min-width: 1000px) {
     font-size: 24px;
-    line-height: 24px;
+    line-height: 36px;
   }
 `
 export const CarouselLink = styled.a`
@@ -71,30 +63,33 @@ export const CarouselLink = styled.a`
     border-color: rgb(22, 83, 137);
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 1000px) {
     font-size: 18px;
     line-height: 24px;
     padding: 12px 24px;
-  }
-  @media (min-width: 1500px) {
-    font-size: 24px;
-    line-height: 24px;
   }
 `
 
 export const DirectionControl = styled.div`
   align-self: center;
-  width: 36px;
-  height: 36px;
+  width: 18px;
+  height: 18px;
+  border-width: 6px 6px 0 0;
+  margin: 0 12px;
   transform: ${props =>
     props.backward ? 'rotate(-135deg)' : 'rotate(45deg)'};
-  border-width: 12px 12px 0 0;
   border-style: solid;
   border-color: #fafafa;
   opacity: 0.5;
   cursor: pointer;
   :hover {
     opacity: 1;
+  }
+
+  @media (min-width: 1000px) {
+    width: 36px;
+    height: 36px;
+    border-width: 12px 12px 0 0;
   }
 `
 export const DirectionControlContainer = styled.div`
@@ -114,7 +109,7 @@ export const IndicatorControl = styled.div`
     opacity: 1;
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 1000px) {
     width: 24px;
     height: 24px;
     margin: 0 12px;
@@ -145,6 +140,7 @@ export const ContentIndicatorsContainer = styled.div`
 export const CarouselContentContainer = styled.div`
   position: absolute;
   display: flex;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
 `
