@@ -22,7 +22,7 @@ export const CarouselImage = styled.img`
 `
 
 export const Title = styled.h2`
-  font-size: 18px;
+  font-size: 24px;
   line-height: 24px;
   color: white;
 

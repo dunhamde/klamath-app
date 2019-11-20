@@ -5,7 +5,16 @@ export const FloatingHeaderLinksList = () => (
   <ul>
     <li>
       <a
-        target="_tab"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="http://klamathtribes.org/"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        target="_blank"
         rel="noopener noreferrer"
         href="http://klamathtribes.org/news/"
       >
@@ -18,7 +27,7 @@ export const FloatingHeaderLinksList = () => (
         rel="noopener noreferrer"
         href="http://klamathtribes.org/administration/"
       >
-        Tribal Departments
+        Administration Departments
       </a>
     </li>
     <li>
@@ -28,6 +37,11 @@ export const FloatingHeaderLinksList = () => (
         href="http://klamathtribes.org/job-openings/"
       >
         Employment
+      </a>
+    </li>
+    <li>
+      <a target="_blank" rel="noopener noreferrer" href="#">
+        Members Area
       </a>
     </li>
     <li>

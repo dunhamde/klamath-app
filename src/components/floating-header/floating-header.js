@@ -6,22 +6,22 @@ import FloatingHeaderLinksList from './fh-links-list'
 
 const HeaderLogo = styled.img`
   align-self: center;
-  width: 80%;
 `
 
 const HeaderContainer = styled.div`
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   max-width: 100%;
   border: 1px solid blue;
-  height: 432px;
+  height: 303px;
   background-image: url(${HeaderBannerSource});
   background-size: cover;
 
   ul {
     display: flex;
+    flex-wrap: wrap;
     padding-left: 0;
     text-align: center;
 
@@ -65,16 +65,18 @@ const HeaderContainer = styled.div`
   li:hover::after {
     transform: rotateY(180deg);
   }
+
+  @media (min-width: 1000px) {
+    flex-direction: column;
+  }
 `
 
 export const TopHeader = () => {
   return (
-    <>
-      <HeaderContainer>
-        <HeaderLogo src={HeaderLogoSource} />
-        <FloatingHeaderLinksList />
-      </HeaderContainer>
-    </>
+    <HeaderContainer>
+      <HeaderLogo src={HeaderLogoSource} />
+      <FloatingHeaderLinksList />
+    </HeaderContainer>
   )
 }
 
