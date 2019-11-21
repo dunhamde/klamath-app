@@ -5,22 +5,26 @@ import HeaderBannerSource from '../../../public/headerpic2.jpg'
 import FloatingHeaderLinksList from './fh-links-list'
 
 const HeaderLogo = styled.img`
-  align-self: center;
+  align-self: flex-start;
+  @media (min-width: 1000px) {
+    align-self: center;
+  }
 `
 
 const HeaderContainer = styled.div`
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   max-width: 100%;
   border: 1px solid blue;
-  height: 303px;
+  height: 63px;
   background-image: url(${HeaderBannerSource});
   background-size: cover;
 
   ul {
-    display: flex;
+    display: none;
+    justify-content: center;
     flex-wrap: wrap;
     padding-left: 0;
     text-align: center;
@@ -67,7 +71,10 @@ const HeaderContainer = styled.div`
   }
 
   @media (min-width: 1000px) {
-    flex-direction: column;
+    height: 303px;
+    ul {
+      display: flex;
+    }
   }
 `
 
