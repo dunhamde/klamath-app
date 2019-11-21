@@ -53,6 +53,7 @@
   "dependencies": {
     "@hot-loader/react-dom": "^16.11.0",
     "react": "^16.11.0",
+    "react-burger-menu": "^2.6.12",
     "react-dom": "^16.11.0",
     "react-hot-loader": "^4.12.17",
     "react-router": "^5.1.2",
