@@ -82,7 +82,7 @@ const HeaderContainer = styled.div`
 export const StyledBurgerMenu = styled.div`
   /* Position and sizing of burger button */
   .bm-burger-button {
-    position: fixed;
+    position: absolute;
     width: 36px;
     height: 30px;
     left: 36px;

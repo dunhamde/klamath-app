@@ -11,7 +11,7 @@ const HeaderContainer = styled.div`
   height: 48px;
 
   ul {
-    display: flex;
+    display: none;
     padding: 0;
   }
   li {
@@ -47,6 +47,12 @@ const HeaderContainer = styled.div`
   }
   li:hover::after {
     transform: rotateY(180deg);
+  }
+
+  @media (min-width: 1000px) {
+    ul {
+      display: flex;
+    }
   }
 `
 
