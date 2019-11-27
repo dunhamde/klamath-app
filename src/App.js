@@ -1,5 +1,4 @@
 import React from 'react'
-import { hot } from 'react-hot-loader'
 import styled from 'styled-components'
 import FloatingHeader from './components/floating-header/floating-header'
 import TopHeader from './components/top-header/top-header'
@@ -29,4 +28,4 @@ const App = () => (
   </AppContainer>
 )
 
-export default hot(module)(App)
+export default App
