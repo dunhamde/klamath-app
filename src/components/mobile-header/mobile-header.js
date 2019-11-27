@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import HeaderLogoSource from '../../../public/klamathtribes1200.png'
 import HeaderBannerSource from '../../../public/headerpic2.jpg'
-import FloatingHeaderLinksList from './fh-links-list'
 
 const HeaderLogo = styled.img`
   align-self: flex-start;
@@ -14,7 +13,7 @@ const HeaderLogo = styled.img`
 const HeaderContainer = styled.div`
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   max-width: 100%;
   border: 1px solid blue;
@@ -78,13 +77,26 @@ const HeaderContainer = styled.div`
   }
 `
 
-export const TopHeader = () => {
+export const HamburgerMenu = styled.div`
+  div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+`
+
+export const MobileHeader = () => {
   return (
     <HeaderContainer>
       <HeaderLogo src={HeaderLogoSource} />
-      <FloatingHeaderLinksList />
+      <HamburgerMenu>
+        <div />
+        <div />
+        <div />
+      </HamburgerMenu>
     </HeaderContainer>
   )
 }
 
-export default TopHeader
+export default MobileHeader

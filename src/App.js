@@ -8,6 +8,7 @@ import MembersCtaSection from './components/members-cta-section/members-cta-sect
 import MedallionSection from './components/medallion-section/medallion-section'
 import CwaamCta from './components/cwaam-cta/cwaam-cta'
 import Footer from './components/footer/footer'
+import MobileHeader from './components/mobile-header/mobile-header'
 
 const AppContainer = styled.div`
   font-family: Arial, Helvetica, sans-serif;
@@ -19,6 +20,7 @@ const App = () => (
   <AppContainer>
     <TopHeader />
     <FloatingHeader />
+    <MobileHeader />
     <Carousel />
     <MembersCtaSection />
     <MedallionSection />
