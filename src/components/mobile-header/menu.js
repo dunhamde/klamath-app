@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import FloatingHeaderLinksList from '../floating-header/fh-links-list'
 
 export const HamburgerMenu = styled.div`
+  padding-right: 12px;
+
   div {
     width: 35px;
     height: 5px;
@@ -10,7 +12,6 @@ export const HamburgerMenu = styled.div`
     margin: 6px 0;
   }
 
-  /* Rotate the first bar */
   div:first-child {
     -webkit-transform: ${props =>
       props.menuOpen && 'rotate(-45deg) translate(-9px, 6px)'};
@@ -18,18 +19,19 @@ export const HamburgerMenu = styled.div`
       props.menuOpen && 'rotate(-45deg) translate(-9px, 6px)'};
   }
 
-  /* Fade out the second bar */
   div:nth-child(2) {
     opacity: ${props => props.menuOpen && 0};
   }
 
-  /* Rotate last bar */
   div:nth-child(3) {
     -webkit-transform: ${props =>
       props.menuOpen && 'rotate(45deg) translate(-8px, -8px)'};
     transform: ${props =>
       props.menuOpen && 'rotate(45deg) translate(-8px, -8px)'};
   }
+`
+export const CloseButton = styled.a`
+  font-family: Verdana, sans-serif;
 `
 
 export const SideNavigation = styled.div`
@@ -44,8 +46,19 @@ export const SideNavigation = styled.div`
   padding-top: 60px;
   transition: 0.5s;
 
+  ${CloseButton} {
+    position: absolute;
+    top: 0;
+    left: 24px;
+    font-size: 36px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
   a {
-    padding: 8px 8px 8px 32px;
+    padding: 12px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -71,6 +84,9 @@ export const Menu = () => {
         <div />
       </HamburgerMenu>
       <SideNavigation menuOpen={menuOpen}>
+        <CloseButton onClick={() => setMenuState(false)}>
+          ×
+        </CloseButton>
         <FloatingHeaderLinksList />
       </SideNavigation>
     </>
