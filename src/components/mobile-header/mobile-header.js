@@ -22,10 +22,6 @@ export const HeaderContainer = styled.div`
   height: 63px;
   background-image: url(${HeaderBannerSource});
   background-size: cover;
-
-  ${StyledMenu} {
-    padding-right: 12px;
-  }
 `
 
 export const MobileHeader = () => {

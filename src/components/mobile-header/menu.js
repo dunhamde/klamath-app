@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import FloatingHeaderLinksList from '../floating-header/fh-links-list'
 
 export const HamburgerMenu = styled.div`
   div {
@@ -31,17 +32,48 @@ export const HamburgerMenu = styled.div`
   }
 `
 
+export const SideNavigation = styled.div`
+  height: 100%;
+  width: ${props => (props.menuOpen ? '250px' : '0')}
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    color: #f1f1f1;
+  }
+`
+
 export const Menu = () => {
   const [menuOpen, setMenuState] = useState(false)
   return (
-    <HamburgerMenu
-      onClick={() => setMenuState(!menuOpen)}
-      menuOpen={menuOpen}
-    >
-      <div />
-      <div />
-      <div />
-    </HamburgerMenu>
+    <>
+      <HamburgerMenu
+        onClick={() => setMenuState(!menuOpen)}
+        menuOpen={menuOpen}
+      >
+        <div />
+        <div />
+        <div />
+      </HamburgerMenu>
+      <SideNavigation menuOpen={menuOpen}>
+        <FloatingHeaderLinksList />
+      </SideNavigation>
+    </>
   )
 }
 
