@@ -22,6 +22,10 @@ export const HeaderContainer = styled.div`
   height: 63px;
   background-image: url(${HeaderBannerSource});
   background-size: cover;
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
 `
 
 export const MobileHeader = () => {

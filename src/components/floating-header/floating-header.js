@@ -13,17 +13,17 @@ const HeaderLogo = styled.img`
 
 const HeaderContainer = styled.div`
   box-sizing: border-box;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   max-width: 100%;
   border: 1px solid blue;
-  height: 63px;
+  height: 303px;
   background-image: url(${HeaderBannerSource});
   background-size: cover;
 
   ul {
-    display: none;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding-left: 0;
@@ -71,10 +71,7 @@ const HeaderContainer = styled.div`
   }
 
   @media (min-width: 1000px) {
-    height: 303px;
-    ul {
-      display: flex;
-    }
+    display: flex;
   }
 `
 
