@@ -23,6 +23,7 @@ export const FloatingHeaderLinksList = () => (
     </li>
     <li>
       <div class='dropdown'>
+        <div>
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -30,6 +31,7 @@ export const FloatingHeaderLinksList = () => (
       >
         News And Events
       </a>
+      </div>
         <ul>
           <a
             target="_blank"

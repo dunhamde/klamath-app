@@ -37,15 +37,17 @@ const HeaderContainer = styled.div`
   li {
     list-style: none;
     border-left: 2px solid black;
-    padding: 12px;
+    
   }
 
+  div.dropdown > div {
+    padding: 0 12px;
+  }
   div.dropdown > ul {
     display: flex;
     flex-direction: column;
     position: absolute;
     background: lightblue;
-    /* margin-top: 24px; */
     z-index: 1;
   }
 
