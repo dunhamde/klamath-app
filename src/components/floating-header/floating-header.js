@@ -39,6 +39,16 @@ const HeaderContainer = styled.div`
     border-left: 2px solid black;
     padding: 12px;
   }
+
+  div.dropdown > ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: lightblue;
+    /* margin-top: 24px; */
+    z-index: 1;
+  }
+
   a {
     text-transform: uppercase;
     text-decoration: none;
@@ -53,7 +63,7 @@ const HeaderContainer = styled.div`
   a:hover {
     color: rgba(221, 133, 0, 0.7);
   }
-  li::after {
+  a::after {
     margin-top: 2px;
     content: '';
     width: 100%;
@@ -66,7 +76,7 @@ const HeaderContainer = styled.div`
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
-  li:hover::after {
+  a:hover::after {
     transform: rotateY(180deg);
   }
 

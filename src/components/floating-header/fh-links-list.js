@@ -11,8 +11,18 @@ export const FloatingHeaderLinksList = () => (
       >
         Home
       </a>
+      <ul>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://klamathtribes.org/mission/"
+        >
+          Tribal Mission
+        </a>
+      </ul>
     </li>
     <li>
+      <div class='dropdown'>
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -20,6 +30,51 @@ export const FloatingHeaderLinksList = () => (
       >
         News And Events
       </a>
+        <ul>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://klamathtribes.org/news/news/"
+          >
+            Newsletters
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://klamathtribes.org/news/tribal-news-and-events/press-release-2/"
+          >
+            Press Release
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://klamathtribes.org/news/restoration-celebration/"
+          >
+            The Klamath Tribes Restoration Celebration
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://klamathtribes.org/news/obituaries-3/"
+          >
+            Obituaries
+          </a> 
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://klamathrestoration.gov/home"
+          >
+            KlamathRestoration.gov
+          </a>       
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://klamathrestoration.gov/keep-me-informed/klamath-agreements"
+          >
+            Salmon Recovery
+          </a>        
+        </ul>
+      </div>
     </li>
     <li>
       <a
