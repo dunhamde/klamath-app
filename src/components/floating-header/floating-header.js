@@ -12,6 +12,8 @@ const HeaderLogo = styled.img`
 `
 
 const HeaderContainer = styled.div`
+  /* Header background and container styling */
+
   box-sizing: border-box;
   display: none;
   flex-direction: column;
@@ -21,6 +23,8 @@ const HeaderContainer = styled.div`
   height: 303px;
   background-image: url(${HeaderBannerSource});
   background-size: cover;
+
+  /* Header links lists and list items */
 
   ul {
     display: flex;
@@ -37,19 +41,29 @@ const HeaderContainer = styled.div`
   li {
     list-style: none;
     border-left: 2px solid black;
-    
   }
+
+  /* Header dropdown menus */
 
   div.dropdown > div {
     padding: 0 12px;
   }
   div.dropdown > ul {
-    display: flex;
     flex-direction: column;
     position: absolute;
     background: lightblue;
     z-index: 1;
   }
+
+  .dropdown-content {
+    display: none;
+  }
+
+  div.dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+  /* Header links */
 
   a {
     text-transform: uppercase;
@@ -62,6 +76,7 @@ const HeaderContainer = styled.div`
     overflow: hidden;
     cursor: pointer;
   }
+
   a:hover {
     color: rgba(221, 133, 0, 0.7);
   }
@@ -81,6 +96,8 @@ const HeaderContainer = styled.div`
   a:hover::after {
     transform: rotateY(180deg);
   }
+
+  /* Media queries */
 
   @media (min-width: 1000px) {
     display: flex;

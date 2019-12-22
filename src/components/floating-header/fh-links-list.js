@@ -4,78 +4,84 @@ import React from 'react'
 export const FloatingHeaderLinksList = () => (
   <ul>
     <li>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="http://klamathtribes.org/"
-      >
-        Home
-      </a>
-      <ul>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://klamathtribes.org/mission/"
-        >
-          Tribal Mission
-        </a>
-      </ul>
-    </li>
-    <li>
-      <div class='dropdown'>
+      <div class="dropdown">
         <div>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="http://klamathtribes.org/news/"
-      >
-        News And Events
-      </a>
-      </div>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://klamathtribes.org/"
+          >
+            Home
+          </a>
+        </div>
         <ul>
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="http://klamathtribes.org/news/news/"
+            href="http://klamathtribes.org/mission/"
           >
-            Newsletters
+            Tribal Mission
           </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="http://klamathtribes.org/news/tribal-news-and-events/press-release-2/"
-          >
-            Press Release
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="http://klamathtribes.org/news/restoration-celebration/"
-          >
-            The Klamath Tribes Restoration Celebration
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="http://klamathtribes.org/news/obituaries-3/"
-          >
-            Obituaries
-          </a> 
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="http://klamathrestoration.gov/home"
-          >
-            KlamathRestoration.gov
-          </a>       
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="http://klamathrestoration.gov/keep-me-informed/klamath-agreements"
-          >
-            Salmon Recovery
-          </a>        
         </ul>
+      </div>
+    </li>
+    <li>
+      <div class="dropdown">
+        <div>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://klamathtribes.org/news/"
+          >
+            News And Events
+          </a>
+        </div>
+        <div class="dropdown-content">
+          <ul>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://klamathtribes.org/news/news/"
+            >
+              Newsletters
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://klamathtribes.org/news/tribal-news-and-events/press-release-2/"
+            >
+              Press Release
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://klamathtribes.org/news/restoration-celebration/"
+            >
+              The Klamath Tribes Restoration Celebration
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://klamathtribes.org/news/obituaries-3/"
+            >
+              Obituaries
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://klamathrestoration.gov/home"
+            >
+              KlamathRestoration.gov
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://klamathrestoration.gov/keep-me-informed/klamath-agreements"
+            >
+              Salmon Recovery
+            </a>
+          </ul>
+        </div>
       </div>
     </li>
     <li>
