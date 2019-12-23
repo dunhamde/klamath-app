@@ -2,7 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import HeaderLogoSource from '../../../public/klamathtribes1200.png'
 import HeaderBannerSource from '../../../public/headerpic2.jpg'
-import FloatingHeaderLinksList from './fh-links-list'
+import NavigationLinks, {
+  NavigationLinksList,
+  LinkSectionListItem,
+  Dropdown,
+  LinkContainer,
+  DropdownLinksList,
+  DropdownContent,
+} from './navigation-links'
 
 const HeaderLogo = styled.img`
   align-self: flex-start;
@@ -26,40 +33,41 @@ const HeaderContainer = styled.div`
 
   /* Header links lists and list items */
 
-  ul {
+  ${NavigationLinksList} {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding-left: 0;
     text-align: center;
 
-    li:first-child {
+    ${LinkSectionListItem}:first-child {
       border-left: 0;
     }
   }
 
-  li {
+  ${LinkSectionListItem} {
     list-style: none;
     border-left: 2px solid black;
   }
 
   /* Header dropdown menus */
 
-  div.dropdown > div {
+  ${LinkContainer} {
     padding: 0 12px;
   }
-  div.dropdown > ul {
+
+  ${DropdownLinksList} {
+  }
+
+  ${DropdownContent} {
+    display: none;
     flex-direction: column;
     position: absolute;
     background: lightblue;
     z-index: 1;
   }
 
-  .dropdown-content {
-    display: none;
-  }
-
-  div.dropdown:hover .dropdown-content {
+  ${Dropdown}:hover ${DropdownContent} {
     display: flex;
   }
 
@@ -108,7 +116,7 @@ export const TopHeader = () => {
   return (
     <HeaderContainer>
       <HeaderLogo src={HeaderLogoSource} />
-      <FloatingHeaderLinksList />
+      <NavigationLinks />
     </HeaderContainer>
   )
 }

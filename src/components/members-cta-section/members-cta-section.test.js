@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import MembersCtaSection from './members-cta-section'
 
-describe('FloatingHeaderLinksList', () => {
+describe('MembersCtaSection', () => {
   test('renders News And Events', () => {
     const { getByText } = render(<MembersCtaSection />)
 

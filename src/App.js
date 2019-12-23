@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import FloatingHeader from './components/floating-header/floating-header'
+import Header from './components/floating-header/header'
 import TopHeader from './components/top-header/top-header'
 import Carousel from './components/carousel/carousel'
 import MembersCtaSection from './components/members-cta-section/members-cta-section'
@@ -18,7 +18,7 @@ const AppContainer = styled.div`
 const App = () => (
   <AppContainer>
     <TopHeader />
-    <FloatingHeader />
+    <Header />
     <MobileHeader />
     <Carousel />
     <MembersCtaSection />

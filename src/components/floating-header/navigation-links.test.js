@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import FloatingHeaderLinksList from './fh-links-list'
+import NavigationLinks from './navigation-links'
 
-describe('FloatingHeaderLinksList', () => {
+describe('NavigationLinks', () => {
   test('renders News And Events', () => {
-    const { getByText } = render(<FloatingHeaderLinksList />)
+    const { getByText } = render(<NavigationLinks />)
 
     expect(getByText('News And Events'))
   })

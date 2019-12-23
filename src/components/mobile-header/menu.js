@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import FloatingHeaderLinksList from '../floating-header/fh-links-list'
+import NavigationLinks from '../floating-header/navigation-links'
 
 export const HamburgerMenu = styled.div`
   padding-right: 12px;
@@ -36,7 +36,7 @@ export const CloseButton = styled.a`
 
 export const SideNavigation = styled.div`
   height: 100%;
-  width: ${props => (props.menuOpen ? '250px' : '0')}
+  width: ${props => (props.menuOpen ? '250px' : '0')};
   position: fixed;
   z-index: 1;
   top: 0;
@@ -87,7 +87,7 @@ export const Menu = () => {
         <CloseButton onClick={() => setMenuState(false)}>
           ×
         </CloseButton>
-        <FloatingHeaderLinksList />
+        <NavigationLinks />
       </SideNavigation>
     </>
   )
