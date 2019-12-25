@@ -245,7 +245,7 @@ export const NavigationLinks = () => (
           rel="noopener noreferrer"
           href="http://klamathtribes.org/administration/natural-resources/"
         >
-          Hunting and Fishingasdf
+          Hunting and Fishing
         </a>
       </Dropdown>
     </LinkSectionListItem>
