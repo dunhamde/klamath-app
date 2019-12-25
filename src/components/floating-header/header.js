@@ -5,7 +5,7 @@ import HeaderBannerSource from '../../../public/headerpic2.jpg'
 import NavigationLinks, {
   NavigationLinksList,
   LinkSectionListItem,
-  Dropdown,
+  DropdownContainer,
   LinkContainer,
   DropdownLinksList,
   DropdownContent,
@@ -67,7 +67,7 @@ const HeaderContainer = styled.div`
     z-index: 1;
   }
 
-  ${Dropdown}:hover ${DropdownContent} {
+  ${DropdownContainer}:hover ${DropdownContent} {
     display: flex;
   }
 
