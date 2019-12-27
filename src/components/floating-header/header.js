@@ -57,18 +57,27 @@ const HeaderContainer = styled.div`
   }
 
   ${DropdownLinksList} {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 12px;
   }
 
   ${DropdownContent} {
     display: none;
     flex-direction: column;
     position: absolute;
-    background: lightblue;
+    background: #000852;
     z-index: 1;
   }
 
   ${DropdownContainer}:hover ${DropdownContent} {
     display: flex;
+  }
+
+  ul > a {
+    display: block;
+    padding: 6px 0;
   }
 
   /* Header links */

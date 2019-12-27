@@ -9,13 +9,17 @@ export const LinkContainer = styled.div``
 export const DropdownLinksList = styled.ul``
 export const DropdownContent = styled.div``
 
-export const DropdownArrow = styled.div``
+export const DropdownArrow = styled.div`
+  transform: ${props =>
+    props.isOpen ? `rotate(180deg)` : `rotate(0deg)`};
+  transition: transform 200ms ease-in-out;
+`
 
 export const LinkText = styled.span`
   display: flex;
 
   ${DropdownArrow} {
-    padding-left: 6px;
+    margin-left: 6px;
   }
 `
 
@@ -27,7 +31,10 @@ export const Dropdown = ({
   const [isOpen, setOpen] = useState(false)
 
   return (
-    <DropdownContainer>
+    <DropdownContainer
+      onMouseOver={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
       <LinkContainer>
         <a
           target="_blank"
@@ -36,7 +43,7 @@ export const Dropdown = ({
         >
           <LinkText>
             {headerLinkText}
-            <DropdownArrow>&#9660;</DropdownArrow>
+            <DropdownArrow isOpen={isOpen}>&#9660;</DropdownArrow>
           </LinkText>
         </a>
       </LinkContainer>
